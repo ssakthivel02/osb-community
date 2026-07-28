@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "contentStates": ["pending", "published", "restricted", "removed", "appealed"],
+  "severityLevels": ["low", "medium", "high", "critical"],
+  "criticalCategories": ["child-safety", "credible-threat", "grooming", "self-harm-imminent"],
+  "slaMinutes": {"critical": 15, "high": 60, "medium": 480, "low": 1440},
+  "permanentBanRequiresDualApproval": true,
+  "moderatorActionsAudited": true,
+  "appealDecisionIndependentReviewer": true,
+  "modelOnlyPermanentEnforcementForbidden": true
+}

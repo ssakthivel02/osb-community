@@ -1,0 +1,22 @@
+name: Validate Community Baseline
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate policy
+        run: python scripts/validate_community_baseline.py
+      - name: Run negative safety cases
+        run: python scripts/test_community_safety_cases.py
