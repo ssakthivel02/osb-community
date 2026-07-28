@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "apiPrefix": "/api/v1/community",
+  "authenticationRequired": true,
+  "tenantIsolationRequired": true,
+  "supportedLocales": ["en-GB", "ta"],
+  "minorProtection": {
+    "enabled": true,
+    "guardianControls": true,
+    "directMessagingDefault": "disabled",
+    "locationSharing": "forbidden",
+    "ageAppropriateProfiles": true
+  },
+  "moderation": {
+    "prePublicationChecks": true,
+    "humanEscalation": true,
+    "appealsSupported": true,
+    "dualApprovalForPermanentBan": true,
+    "evidenceRetentionDays": 180
+  },
+  "abuseControls": {
+    "rateLimits": true,
+    "spamDetection": true,
+    "harassmentDetection": true,
+    "groomingRiskEscalation": true,
+    "selfHarmEscalation": true,
+    "credentialAndPaymentDataForbidden": true
+  },
+  "privacy": {
+    "piiMinimisation": true,
+    "redactedLogs": true,
+    "deletionWorkflow": true,
+    "exportWorkflow": true
+  }
+}
